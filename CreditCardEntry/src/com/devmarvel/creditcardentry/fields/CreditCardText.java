@@ -3,7 +3,6 @@ package com.devmarvel.creditcardentry.fields;
 import android.content.Context;
 import android.text.Editable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.Gravity;
 
 import com.devmarvel.creditcardentry.R;
@@ -70,7 +69,7 @@ public class CreditCardText extends CreditEntryFieldBase {
 			String formatted = CreditCardUtil.formatForViewing(number, type);
 
 			if (!number.equalsIgnoreCase(formatted)) {
-				Log.i("CreditCardText", formatted);
+				//Log.i("CreditCardText", formatted);
 				this.removeTextChangedListener(this);
 				this.setText(formatted);
 				this.setSelection(formatted.length());

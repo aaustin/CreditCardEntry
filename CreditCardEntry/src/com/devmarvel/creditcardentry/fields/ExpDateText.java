@@ -3,7 +3,6 @@ package com.devmarvel.creditcardentry.fields;
 import android.content.Context;
 import android.text.Editable;
 import android.util.AttributeSet;
-import android.util.Log;
 
 import com.devmarvel.creditcardentry.R;
 import com.devmarvel.creditcardentry.internal.CreditCardUtil;
@@ -46,7 +45,7 @@ public class ExpDateText extends CreditEntryFieldBase {
 			this.removeTextChangedListener(this);
 			String formatted = CreditCardUtil
 					.formatExpirationDate(s.toString());
-			Log.i("CreditCardText", formatted);
+			//Log.i("CreditCardText", formatted);
 			this.setText(formatted);
 			this.setSelection(formatted.length());
 			this.addTextChangedListener(this);
